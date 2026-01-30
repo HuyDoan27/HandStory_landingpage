@@ -1,22 +1,26 @@
+import anh1 from '../assets/anh2.jpg';
+import anh3 from '../assets/anh3.jpg';
+import anh5 from '../assets/anh5.jpg';
+
 const Features = () => {
   const features = [
     {
       id: 1,
       title: 'ĐƯỢC LÀM THỦ CÔNG',
-      description: 'Túi được làm bằng tay 100% với đôi ngũ thợ lành nghề. Mina đảm bảo mang đến sản phẩm Handmade tinh sảo tới từng chi tiết.',
-      image: 'https://images.unsplash.com/photo-1559395285-19e78b6f6bce?w=500&q=80'
+      description: 'Các sản phẩm được làm và thiết kế bằng tay 100% với các thành viên của InGift. InGift đảm bảo mang đến sản phẩm quà tặng tốt và giống với thiết kế nhất.',
+      image: anh1
     },
     {
       id: 2,
       title: 'THIẾT KẾ THEO YÊU CẦU',
-      description: 'Túi thiết kế tên và họa tiết theo yêu cầu: thương hiệu cá nhân, Logo doanh nghiệp. Phối màu theo sở thích theo sở thích.',
-      image: 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500&q=80'
+      description: 'Sản phẩm quà tặng được thiết kế chi tiết theo yêu cầu: Concept, Tone màu, Phối màu theo sở thích theo sở thích.',
+      image: anh3
     },
     {
       id: 3,
       title: 'KIỂU DÁNG HIỆN ĐẠI',
-      description: 'Túi handmade luôn đổi mới và sáng tạo để tạo ra những sản phẩm độc lạ bắt kịp xung hướng thời trang.',
-      image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&q=80'
+      description: 'Các sản phẩm quà tặng của InGift luôn đổi mới và sáng tạo để tạo ra những sản phẩm độc lạ bắt kịp xung hướng.',
+      image: anh5
     }
   ];
 

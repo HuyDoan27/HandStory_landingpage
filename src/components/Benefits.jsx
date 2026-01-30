@@ -1,3 +1,4 @@
+
 const Benefits = () => {
     const benefits = [
         {
@@ -21,7 +22,7 @@ const Benefits = () => {
     ];
 
     return (
-        <section className="benefits-section">
+        <section id="benefits" className="benefits-section">
             <div className="benefits-container">
                 <div className="benefits-header">
                     <h2 className="benefits-bg-text">QUYỀN LỢI</h2>

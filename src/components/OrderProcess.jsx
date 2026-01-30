@@ -1,128 +1,136 @@
 import { useState } from 'react';
 
 const OrderProcess = () => {
-    const [activeStep, setActiveStep] = useState(1);
+  const [activeStep, setActiveStep] = useState(1);
 
-    const steps = [
-        {
-            id: 1,
-            number: '01',
-            icon: '📋',
-            title: 'Khách hàng gửi yêu cầu',
-            subtitle: 'Bắt đầu hành trình',
-            description: 'Gửi thông tin về size, màu sắc, thông tin người nhận và sản phẩm bên trong quà tặng',
-            color: '#FF6B9D',
-            illustration: '💌',
-            details: [
+  const steps = [
+    {
+      id: 1,
+      number: '01',
+      icon: '📋',
+      title: 'Khách hàng gửi yêu cầu',
+      subtitle: 'Bắt đầu hành trình',
+      description: 'Gửi thông tin về size, màu sắc, thông tin người nhận và sản phẩm bên trong quà tặng',
+      color: '#FF6B9D',
+      illustration: '💌',
+      details: [
 
-            ]
-        },
-        {
-            id: 2,
-            number: '02',
-            icon: '🎨',
-            title: 'HandStory thiết kế',
-            subtitle: 'Sáng tạo độc đáo',
-            description: 'Đội ngũ thiết kế sẽ tạo mẫu quà tặng độc đáo và gửi lại khách hàng để duyệt',
-            color: '#C471F5',
-            illustration: '✨',
-            details: [
+      ]
+    },
+    {
+      id: 2,
+      number: '02',
+      icon: '🎨',
+      title: 'HandStory thiết kế',
+      subtitle: 'Sáng tạo độc đáo',
+      description: 'Đội ngũ thiết kế sẽ tạo mẫu quà tặng độc đáo và gửi lại khách hàng để duyệt',
+      color: '#C471F5',
+      illustration: '✨',
+      details: [
 
-            ]
-        },
-        {
-            id: 3,
-            number: '03',
-            icon: '🚚',
-            title: 'Thanh toán & Giao hàng',
-            subtitle: 'Hoàn tất đơn hàng',
-            description: 'Khách hàng cọc tiền, HandStory đóng gói cẩn thận và giao hàng tận nơi',
-            color: '#12CBC4',
-            illustration: '🎉',
-            details: [
+      ]
+    },
+    {
+      id: 3,
+      number: '03',
+      icon: '🚚',
+      title: 'Thanh toán & Giao hàng',
+      subtitle: 'Hoàn tất đơn hàng',
+      description: 'Khách hàng cọc tiền, HandStory đóng gói cẩn thận và giao hàng tận nơi',
+      color: '#12CBC4',
+      illustration: '🎉',
+      details: [
 
-            ]
-        }
-    ];
+      ]
+    }
+  ];
 
-    return (
-        <section className="order-process-section">
-            <div className="process-bg-shapes">
-                <div className="shape shape-1"></div>
-                <div className="shape shape-2"></div>
-                <div className="shape shape-3"></div>
-            </div>
+  return (
+    <section id="order-process" className="order-process-section">
+      <div className="process-bg-shapes">
+        <div className="shape shape-1"></div>
+        <div className="shape shape-2"></div>
+        <div className="shape shape-3"></div>
+      </div>
 
-            <div className="process-container">
-                <div className="process-header">
-                    <h1 className="process-title">
-                        Chỉ <span className="highlight">3 bước</span> để có món quà<br />
-                        handmade <span className="highlight-2">độc nhất</span> của riêng bạn
-                    </h1>
-                </div>
+      <div className="process-container">
+        <div className="process-header">
+          <h1 className="process-title">
+            Chỉ <span className="highlight">3 bước</span> để có món quà<br />
+            handmade <span className="highlight-2">độc nhất</span> của riêng bạn
+          </h1>
+        </div>
 
-                {/* Timeline vertical cho desktop */}
-                <div className="timeline-container">
-                    <div className="timeline-line"></div>
+        {/* Timeline vertical cho desktop */}
+        <div className="timeline-container">
+          <div className="timeline-line"></div>
 
-                    {steps.map((step, index) => (
-                        <div
-                            key={step.id}
-                            className={`timeline-item ${activeStep === step.id ? 'active' : ''} ${index % 2 === 0 ? 'left' : 'right'}`}
-                            onMouseEnter={() => setActiveStep(step.id)}
-                        >
-                            <div className="timeline-dot" style={{ background: step.color }}>
-                                <span className="dot-number">{step.number}</span>
-                                <div className="dot-pulse" style={{ background: step.color }}></div>
-                            </div>
+          {steps.map((step, index) => (
+            <div
+              key={step.id}
+              className={`timeline-item ${activeStep === step.id ? 'active' : ''} ${index % 2 === 0 ? 'left' : 'right'}`}
+              onMouseEnter={() => setActiveStep(step.id)}
+            >
+              <div className="timeline-dot" style={{ background: step.color }}>
+                <span className="dot-number">{step.number}</span>
+                <div className="dot-pulse" style={{ background: step.color }}></div>
+              </div>
 
-                            <div className="timeline-content">
-                                <div className="content-card" style={{ borderColor: step.color }}>
-                                    <div className="card-header" style={{ background: step.color }}>
-                                        <div className="header-left">
-                                            <span className="card-icon">{step.icon}</span>
-                                            <div>
-                                                <div className="card-subtitle">{step.subtitle}</div>
-                                                <h3 className="card-title">{step.title}</h3>
-                                            </div>
-                                        </div>
-                                        <span className="header-illustration">{step.illustration}</span>
-                                    </div>
+              <div className="timeline-content">
+                <div className="content-card" style={{ borderColor: step.color }}>
+                  <div className="card-header" style={{ background: step.color }}>
+                    <div className="header-left">
+                      <span className="card-icon">{step.icon}</span>
+                      <div>
+                        <div className="card-subtitle">{step.subtitle}</div>
+                        <h3 className="card-title">{step.title}</h3>
+                      </div>
+                    </div>
+                    <span className="header-illustration">{step.illustration}</span>
+                  </div>
 
-                                    <div className="card-body">
-                                        <p className="card-description">{step.description}</p>
+                  <div className="card-body">
+                    <p className="card-description">{step.description}</p>
 
-                                        <div className="card-details">
-                                            {step.details.map((detail, idx) => (
-                                                <div key={idx} className="detail-item">
-                                                    <span className="detail-icon">{detail.icon}</span>
-                                                    <span className="detail-text">{detail.text}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div className="card-footer">
-                                        <div className="step-indicator">
-                                            Bước {step.id}/3
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div className="card-details">
+                      {step.details.map((detail, idx) => (
+                        <div key={idx} className="detail-item">
+                          <span className="detail-icon">{detail.icon}</span>
+                          <span className="detail-text">{detail.text}</span>
                         </div>
-                    ))}
-                </div>
+                      ))}
+                    </div>
+                  </div>
 
-                <div className="process-footer">
-                    <button className="start-button">
-                        <span className="button-text">Đặt hàng ngay</span>
-                        <span className="button-icon">→</span>
-                        <div className="button-glow"></div>
-                    </button>
+                  <div className="card-footer">
+                    <div className="step-indicator">
+                      Bước {step.id}/3
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          ))}
+        </div>
 
-            <style>{`
+        <div className="process-footer">
+          <a
+            href="https://zalo.me/0987599814"   // thay bằng link Zalo của bạn
+            target="_blank"
+            rel="noopener noreferrer"
+            className="zalo-link"
+          >
+            <button className="start-button">
+              <span className="button-text">Thiết kế thiệp ngay</span>
+              <span className="button-icon">→</span>
+              <div className="button-glow"></div>
+            </button>
+          </a>
+        </div>
+
+      </div>
+
+      <style>{`
         .order-process-section {
           padding: 40px 20px;
           position: relative;
@@ -676,8 +684,8 @@ const OrderProcess = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default OrderProcess;

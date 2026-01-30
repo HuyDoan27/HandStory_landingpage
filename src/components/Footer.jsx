@@ -1,110 +1,107 @@
-import logo from '../assets/logo.png';
+import logo from '../assets/logo5.png';
 
 const Footer = () => {
-    const footerLinks = {
-        company: {
-            title: 'VỀ HANDSTORY',
-            links: [
-                { name: 'Giới thiệu', url: '#' },
-                { name: 'Câu chuyện thương hiệu', url: '#' },
-                { name: 'Đội ngũ sáng tạo', url: '#' },
-            ]
-        },
-        products: {
-            title: 'SẢN PHẨM',
-            links: [
-                { name: 'Quà tặng handmade', url: '#' },
-                { name: 'Quà tặng cá nhân hóa', url: '#' },
-                { name: 'Set quà combo', url: '#' },
-                { name: 'Nguyên liệu DIY', url: '#' }
-            ]
-        },
-        support: {
-            title: 'HỖ TRỢ',
-            links: [
-                { name: 'Hướng dẫn đặt hàng', url: '#' },
-                { name: 'Chính sách bảo hành', url: '#' },
-                { name: 'Chính sách đổi trả', url: '#' },
-                { name: 'Câu hỏi thường gặp', url: '#' }
-            ]
-        }
-    };
+  const footerLinks = {
+    company: {
+      title: 'VỀ HANDSTORY',
+      links: [
+        { name: 'Giới thiệu', url: '#about' },
+        { name: 'Câu chuyện thương hiệu', url: '#about' },
+      ]
+    },
+    products: {
+      title: 'SẢN PHẨM',
+      links: [
+        { name: 'Quà tặng handmade', url: '#products' },
+        { name: 'Về quà tặng', url: '#benefits' },
+        { name: 'Set quà combo', url: '#products' },
+      ]
+    },
+    support: {
+      title: 'HỖ TRỢ',
+      links: [
+        { name: 'Hướng dẫn đặt hàng', url: '#order-proces' },
+        { name: 'Quyền lợi khách hàng', url: '#benefits' }
+      ]
+    }
+  };
 
-    return (
-        <footer className="footer">
-            <div className="footer-wave">
-                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M0,0 C300,80 600,80 900,40 L1200,0 L1200,120 L0,120 Z" fill="url(#waveGradient)" />
-                    <defs>
-                        <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#FF6B9D" stopOpacity="0.3" />
-                            <stop offset="50%" stopColor="#C471F5" stopOpacity="0.3" />
-                            <stop offset="100%" stopColor="#12CBC4" stopOpacity="0.3" />
-                        </linearGradient>
-                    </defs>
-                </svg>
+  return (
+    <footer className="footer">
+      <div className="footer-wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C300,80 600,80 900,40 L1200,0 L1200,120 L0,120 Z" fill="url(#waveGradient)" />
+          <defs>
+            <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#FF6B9D" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="#C471F5" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#12CBC4" stopOpacity="0.3" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div className="footer-main">
+        <div className="footer-container">
+          <div className="footer-grid">
+            <div className="footer-brand">
+              <div className="brand-logo">
+                <img src={logo} alt="InGift Logo" style={{ height: "103px" }} />
+              </div>
+              <p className="brand-tagline">
+                Kể câu chuyện của bạn qua từng món quà độc đáo và ý nghĩa
+              </p>
+
+              <div className="contact-info">
+                <p>Email : doanhuy2004@gmail.com</p>
+                <p>SĐT   : 0987 599 814</p>
+              </div>
+
+
             </div>
 
-            <div className="footer-main">
-                <div className="footer-container">
-                    <div className="footer-grid">
-                        <div className="footer-brand">
-                            <div className="brand-logo">
-                                <img src={logo} alt="InGift Logo" style={{ height: "103px" }} />
-                            </div>
-                            <p className="brand-tagline">
-                                Kể câu chuyện của bạn qua từng món quà độc đáo và ý nghĩa
-                            </p>
+            {Object.values(footerLinks).map((section, index) => (
+              <div key={index} className="footer-links-section">
+                <h3 className="section-title">{section.title}</h3>
+                <ul className="links-list">
+                  {section.links.map((link, linkIndex) => (
+                    <li key={linkIndex}>
+                      <a href={link.url} className="footer-link">
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
-                            <div className="contact-info">
-                                <p>Email : doanhuy2004@gmail.com</p>
-                                <p>SĐT   : 0987 599 814</p>
-                            </div>
-
-
-                        </div>
-
-                        {Object.values(footerLinks).map((section, index) => (
-                            <div key={index} className="footer-links-section">
-                                <h3 className="section-title">{section.title}</h3>
-                                <ul className="links-list">
-                                    {section.links.map((link, linkIndex) => (
-                                        <li key={linkIndex}>
-                                            <a href={link.url} className="footer-link">
-                                                {link.name}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+      <div className="footer-bottom">
+        <div className="footer-container">
+          <div className="footer-bottom-content">
+            <p className="copyright">
+              © 2026 HandStory. Handmade with <span className="heart">❤️</span> in Vietnam
+            </p>
+            <div className="footer-bottom-links">
+              <a href="#">Điều khoản</a>
+              <span className="divider">•</span>
+              <a href="#">Bảo mật</a>
+              <span className="divider">•</span>
+              <a href="#">Sitemap</a>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div className="footer-bottom">
-                <div className="footer-container">
-                    <div className="footer-bottom-content">
-                        <p className="copyright">
-                            © 2026 HandStory. Handmade with <span className="heart">❤️</span> in Vietnam
-                        </p>
-                        <div className="footer-bottom-links">
-                            <a href="#">Điều khoản</a>
-                            <span className="divider">•</span>
-                            <a href="#">Bảo mật</a>
-                            <span className="divider">•</span>
-                            <a href="#">Sitemap</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <style>{`
+      <style>{`
         .footer {
           position: relative;
           background: linear-gradient(180deg, #0f0f1e 0%, #1a1a2e 100%);
           color: white;
           overflow: hidden;
+          width: 100%;
         }
 
         .footer-wave {
@@ -376,8 +373,8 @@ const Footer = () => {
           }
         }
       `}</style>
-        </footer>
-    );
+    </footer>
+  );
 };
 
 export default Footer;

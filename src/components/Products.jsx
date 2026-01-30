@@ -1,25 +1,27 @@
 import { useState } from 'react';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
-
+import anh3 from '../assets/anh3.jpg';
+import anh4 from '../assets/anh4.jpg';
+import anh5 from '../assets/anh5.jpg';
 
 const Products = () => {
     const products = [
         {
             id: 1,
             name: 'Túi handmade họa tiết logo',
-            image: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&q=80',
+            image: anh3,
             category: 'Túi xách'
         },
         {
             id: 2,
             name: 'Túi handmade họa tiết doanh nghiệp',
-            image: 'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=500&q=80',
+            image: anh4,
             category: 'Túi xách'
         },
         {
             id: 3,
             name: 'Túi handmade họa tiết cam',
-            image: 'https://images.unsplash.com/photo-1564422170194-896b89110ef8?w=500&q=80',
+            image: anh5,
             category: 'Túi xách'
         },
 
@@ -36,7 +38,7 @@ const Products = () => {
     };
 
     return (
-        <section className="products-section">
+        <section id="products" className="products-section">
             <div className="products-container">
 
                 {/* HEADING */}
@@ -44,8 +46,6 @@ const Products = () => {
                     <span className="heading-small">ĐÃ HOÀN THIỆN</span>
                     <h3 className="heading-main">SẢN PHẨM</h3>
                 </div>
-
-
 
                 {/* SLIDER LAYOUT */}
                 <div className="slider-layout">
@@ -79,7 +79,11 @@ const Products = () => {
                                 className={`thumbnail ${index === activeIndex ? 'active' : ''}`}
                                 onClick={() => setActiveIndex(index)}
                             >
-                                <img src={product.image} alt={product.name} />
+                                <img
+                                  src={product.image}
+                                  alt={product.name}
+                                  className="thumbnail-img"
+                                />
                             </div>
                         ))}
                     </div>

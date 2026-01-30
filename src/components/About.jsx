@@ -2,64 +2,74 @@ import anh1 from '../assets/anh1.jpg';
 import anh2 from '../assets/anh2.jpg';
 
 const About = () => {
-    const socialLinks = [
-        { platform: 'Tiki', url: 'tiki.vn/cua-hang/kieu-handmade' },
-        { platform: 'Shopee', url: 'shopee/kieuhandmade' },
-        { platform: 'Fanpage', url: 'handmadeshop' },
-        { platform: 'Instagram', url: 'handmadeshop' },
-        { platform: 'Youtube', url: 'handmade' },
-    ];
+  const socialLinks = [
+    { platform: 'Thủ công 100%', url: 'Mỗi món quà được làm bằng tay với sự tỉ mỉ và cảm xúc' },
+    { platform: 'Cá nhân hoá', url: 'Thiết kế riêng theo câu chuyện, người nhận và dịp tặng' },
+    { platform: 'Ý nghĩa & cảm xúc', url: 'Không chỉ là món quà, mà là kỷ niệm được lưu giữ' },
+    { platform: 'Phù hợp giới trẻ', url: 'Phong cách sáng tạo, giá thành hợp lý cho học sinh – sinh viên' },
+  ];
 
-    return (
-        <section className="about-section">
-            <div className="about-container">
-                <div className="about-content">
-                    <h2 className="about-subtitle">CHÚNG TÔI LÀ "InGift"</h2>
-                    <h1 className="about-title">Chuyên dịch vụ quà tặng</h1>
 
-                    <p className="about-description">
-                        Là một start-up về quà tặng, HandStory được tạo ra để kể những câu chuyện nhỏ đầy ý nghĩa thông qua từng món quà. Chúng tôi mang đến các sản phẩm quà tặng thủ công, cá nhân hoá và sáng tạo, giúp bạn lưu giữ kỷ niệm, thể hiện cảm xúc và tạo nên những khoảnh khắc đáng nhớ trong hành trình tuổi trẻ.
-                    </p>
-                    <div className="social-links">
-                        {socialLinks.map((link, index) => (
-                            <div key={index} className="social-link-item">
-                                <span className="check-icon">✓</span>
-                                <span className="social-text">
-                                    <strong>{link.platform}:</strong> {link.url}
-                                </span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+  return (
+    <section id="about" className="about-section">
+      <div className="about-container">
+        <div className="about-content">
+          <h2 className="about-subtitle">CHÚNG TÔI LÀ "InGift"</h2>
+          <h1 className="about-title">Chuyên dịch vụ quà tặng</h1>
 
-                <div className="about-images">
-                    <div className="image-card main-image">
-                        <img
-                            src={anh1}
-                            alt="Túi handmade tím hoa"
-                        />
-                        <div className="image-overlay">
-                            <h3>Sản xuất Macrame sỉ và lẻ</h3>
-                            <p>Sản xuất Macrame từ năm 2018, Kiều Handmade chuyên cung cấp sỉ và lẻ các sản phẩm thủ công trang trí nhà của, du lịch: vòng, ghế dù, ...mạnh trang trí tường, headboard, túi xách handmade</p>
-                        </div>
-                    </div>
+          <p className="about-description">
+            Là một start-up về quà tặng, HandStory được tạo ra để kể những câu chuyện nhỏ đầy ý nghĩa thông qua từng món quà. Chúng tôi mang đến các sản phẩm quà tặng thủ công, cá nhân hoá và sáng tạo, giúp bạn lưu giữ kỷ niệm, thể hiện cảm xúc và tạo nên những khoảnh khắc đáng nhớ trong hành trình tuổi trẻ.
+          </p>
+          <div className="social-links">
+            {socialLinks.map((link, index) => (
+              <div key={index} className="social-link-item">
+                <span className="check-icon">✓</span>
+                <span className="social-text">
+                  <strong>{link.platform}:</strong> {link.url}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
 
-                    <div className="image-card secondary-image">
-                        <img
-                            src={anh2}
-                            alt="Túi handmade tím"
-                        />
-                        <div className="image-overlay">
-                            <h3>Cung cấp nguyên vật liệu</h3>
-                            <p>Ngoài ra Kiều Handmade còn có bán nguyên liệu cho các bạn yêu handmade, thích tự làm đồ trang trí, DIY cũng như cung cấp các video hướng dẫn các bạn tự làm macrame.</p>
-                        </div>
-                    </div>
-                </div>
+        <div className="about-images">
+          <div className="image-card main-image">
+            <img
+              src={anh1}
+              alt="Quà tặng handmade macrame"
+            />
+            <div className="image-overlay">
+              <h3>Dịch vụ quà tặng Handmade</h3>
+              <p>
+                Kiều Handmade cung cấp các sản phẩm quà tặng thủ công macrame tinh tế,
+                phù hợp cho sinh nhật, kỷ niệm, lễ cưới, tân gia và quà tặng doanh nghiệp.
+                Mỗi món quà đều được làm thủ công tỉ mỉ, mang giá trị thẩm mỹ và cảm xúc
+                riêng biệt.
+              </p>
             </div>
+          </div>
 
-            <style>{`
+          <div className="image-card secondary-image">
+            <img
+              src={anh2}
+              alt="Quà tặng handmade theo yêu cầu"
+            />
+            <div className="image-overlay">
+              <h3>Thiết kế quà theo yêu cầu</h3>
+              <p>
+                Nhận thiết kế quà tặng cá nhân hóa theo màu sắc, kích thước và thông điệp
+                riêng. Kiều Handmade giúp bạn biến mỗi món quà thành lời nhắn gửi yêu
+                thương, độc đáo và không trùng lặp.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <style>{`
         .about-section {
-          padding: 80px 20px 30px 20px;
+          padding: 30px 20px 30px 20px;
         }
 
         .about-container {
@@ -247,8 +257,8 @@ const About = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default About;

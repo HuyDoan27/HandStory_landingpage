@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import "../styles/banner.css";
-import banner1 from "../assets/banner1.jpg";
 import banner2 from "../assets/banner2.jpg";
 import banner3 from "../assets/banner3.jpg";
+import banner6 from "../assets/banner6.jpg";
+import "../styles/banner.css";
 
 const slides = [
     {
-        image: banner1,
-        title: "Túi handmade thêu tên",
+        image: banner6,
+        title: "Quà tặng theo mùa độc đáo",
         desc: "Quà tặng cá nhân hoá – thủ công – độc bản cho người bạn yêu thương",
         position: "left"
     },
@@ -48,7 +48,7 @@ const BannerSlider = () => {
                 </div>
             ))}
 
-            {index !== 1 && (
+            {index !== 1 && index !== 0 && (
                 <div className={`banner-content position-${slides[index].position}`}>
                     <h1
                         key={`title-${index}`}
@@ -65,11 +65,10 @@ const BannerSlider = () => {
                     </p>
 
                     <button className="btn-primary animate-btn">
-                        Đặt quà ngay
+                        Thiết kế thiệp ngay
                     </button>
                 </div>
             )}
-
 
             <div className="banner-dots">
                 {slides.map((_, i) => (

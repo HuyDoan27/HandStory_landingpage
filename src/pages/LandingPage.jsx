@@ -17,7 +17,6 @@ const LandingPage = () => {
       <Features />
       <Benefits />
       <OrderProcess />
-      <Footer />
     </>
   );
 };

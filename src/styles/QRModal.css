@@ -1,0 +1,292 @@
+/* ===== QR Modal with Ant Design ===== */
+.qr-modal-antd .ant-modal-content {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.qr-modal-antd .ant-modal-close {
+  top: 16px;
+  right: 16px;
+}
+
+.qr-modal-close-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  color: #595959;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.qr-modal-close-icon:hover {
+  background: rgba(0, 0, 0, 0.12);
+  transform: rotate(90deg);
+}
+
+.qr-modal-content {
+  padding: 24px;
+}
+
+/* Header Section */
+.qr-modal-header {
+  text-align: center;
+  padding: 8px 0 16px;
+}
+
+.qr-modal-success-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: #ffffff;
+  animation: successPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 8px 24px rgba(82, 196, 26, 0.25);
+}
+
+.qr-modal-title {
+  margin-bottom: 8px !important;
+  color: #262626;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.qr-modal-subtitle {
+  margin-bottom: 0 !important;
+  color: #8c8c8c;
+  font-size: 15px;
+}
+
+.qr-modal-divider {
+  margin: 20px 0;
+  border-color: #f0f0f0;
+}
+
+/* QR Code Section */
+.qr-modal-qr-section {
+  text-align: center;
+  padding: 8px 0;
+}
+
+.qr-modal-qr-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 24px;
+  background: linear-gradient(135deg, #f0f5ff 0%, #e6f7ff 100%);
+  border-radius: 16px;
+  border: 2px solid #d9d9d9;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.qr-modal-qr-wrapper:hover {
+  border-color: #1890ff;
+  box-shadow: 0 8px 24px rgba(24, 144, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.qr-modal-qr-icon {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+  animation: float 3s ease-in-out infinite;
+}
+
+.qr-modal-qr-image {
+  display: block;
+  width: 220px;
+  height: 220px;
+  border-radius: 12px;
+}
+
+.qr-modal-qr-label {
+  margin: 0;
+  color: #595959;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Link Section */
+.qr-modal-link-section {
+  padding: 8px 0;
+}
+
+.qr-modal-link-label {
+  margin-bottom: 12px !important;
+  color: #262626;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.qr-modal-input.ant-input {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  color: #262626;
+  background: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px 0 0 8px;
+  padding: 10px 16px;
+}
+
+.qr-modal-input.ant-input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+}
+
+.qr-modal-copy-btn.ant-btn {
+  height: auto;
+  padding: 10px 20px;
+  border-radius: 0 8px 8px 0;
+  font-weight: 600;
+  background: #1890ff;
+  border-color: #1890ff;
+  transition: all 0.3s ease;
+}
+
+.qr-modal-copy-btn.ant-btn:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+}
+
+.qr-modal-copy-btn.copied.ant-btn {
+  background: #52c41a;
+  border-color: #52c41a;
+}
+
+.qr-modal-copy-btn.copied.ant-btn:hover {
+  background: #73d13d;
+  border-color: #73d13d;
+}
+
+/* Action Buttons */
+.qr-modal-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.qr-modal-btn-primary.ant-btn {
+  height: 48px;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.qr-modal-btn-primary.ant-btn:hover {
+  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(24, 144, 255, 0.4);
+}
+
+.qr-modal-btn-primary.ant-btn:active {
+  transform: translateY(0);
+}
+
+.qr-modal-btn-secondary.ant-btn {
+  height: 48px;
+  border: 2px solid #d9d9d9;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #595959;
+  transition: all 0.3s ease;
+}
+
+.qr-modal-btn-secondary.ant-btn:hover {
+  border-color: #40a9ff;
+  color: #1890ff;
+  background: #f0f5ff;
+}
+
+/* ===== Animations ===== */
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .qr-modal-antd {
+    max-width: calc(100% - 32px);
+  }
+
+  .qr-modal-content {
+    padding: 20px;
+  }
+
+  .qr-modal-success-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .qr-modal-title {
+    font-size: 20px;
+  }
+
+  .qr-modal-subtitle {
+    font-size: 14px;
+  }
+
+  .qr-modal-qr-wrapper {
+    padding: 20px;
+  }
+
+  .qr-modal-qr-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .qr-modal-actions {
+    flex-direction: column;
+  }
+
+  .qr-modal-btn-primary.ant-btn,
+  .qr-modal-btn-secondary.ant-btn {
+    width: 100%;
+  }
+}
