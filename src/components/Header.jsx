@@ -18,10 +18,10 @@ const Header = () => {
       </div>
 
       <nav className="nav">
-        <a href="#about" onClick={() => scrollToSection("about")}>Giới thiệu</a>
-        <a href="#products" onClick={() => scrollToSection("products")}>Sản phẩm</a>
-        <a href="#benefits" onClick={() => scrollToSection("benefits")}>Quyền lợi</a>
-        <a href="#order-process" onClick={() => scrollToSection("order-process")}>Quy trình đặt hàng</a>
+        <a href="/#about" onClick={() => scrollToSection("about")}>Giới thiệu</a>
+        <a href="/#products" onClick={() => scrollToSection("products")}>Sản phẩm</a>
+        <a href="/#benefits" onClick={() => scrollToSection("benefits")}>Quyền lợi</a>
+        <a href="/#order-process" onClick={() => scrollToSection("order-process")}>Quy trình đặt hàng</a>
 
         <Link to="/tin-tuc" style={{color : "#ff0000"}}>Tin tức</Link>
         <Link to="/card-customize" style={{color : "#ff0000"}}>Thiệp online</Link>

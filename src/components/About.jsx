@@ -41,7 +41,7 @@ const About = () => {
             <div className="image-overlay">
               <h3>Dịch vụ quà tặng Handmade</h3>
               <p>
-                Kiều Handmade cung cấp các sản phẩm quà tặng thủ công macrame tinh tế,
+                HandStory cung cấp các sản phẩm quà tặng thủ công tinh tế,
                 phù hợp cho sinh nhật, kỷ niệm, lễ cưới, tân gia và quà tặng doanh nghiệp.
                 Mỗi món quà đều được làm thủ công tỉ mỉ, mang giá trị thẩm mỹ và cảm xúc
                 riêng biệt.

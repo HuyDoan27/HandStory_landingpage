@@ -5,23 +5,23 @@ const Footer = () => {
     company: {
       title: 'VỀ HANDSTORY',
       links: [
-        { name: 'Giới thiệu', url: '#about' },
-        { name: 'Câu chuyện thương hiệu', url: '#about' },
+        { name: 'Giới thiệu', url: '/#about' },
+        { name: 'Câu chuyện thương hiệu', url: '/#about' },
       ]
     },
     products: {
       title: 'SẢN PHẨM',
       links: [
-        { name: 'Quà tặng handmade', url: '#products' },
-        { name: 'Về quà tặng', url: '#benefits' },
-        { name: 'Set quà combo', url: '#products' },
+        { name: 'Quà tặng handmade', url: '/#products' },
+        { name: 'Về quà tặng', url: '/#benefits' },
+        { name: 'Set quà combo', url: '/#products' },
       ]
     },
     support: {
       title: 'HỖ TRỢ',
       links: [
-        { name: 'Hướng dẫn đặt hàng', url: '#order-proces' },
-        { name: 'Quyền lợi khách hàng', url: '#benefits' }
+        { name: 'Hướng dẫn đặt hàng', url: '/#order-process' },
+        { name: 'Quyền lợi khách hàng', url: '/#benefits' }
       ]
     }
   };
